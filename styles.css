@@ -1340,3 +1340,51 @@ footer a.hover\:bg-secondary\/80:hover {
     }
 }
 
+/* Bio expandable content styles */
+.bio-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    color: hsl(174, 72%, 56%);
+}
+
+.bio-toggle-btn:hover {
+    opacity: 0.8;
+}
+
+.bio-toggle-arrow {
+    transition: transform 0.2s;
+}
+
+.bio-toggle-btn.expanded .bio-toggle-arrow {
+    transform: rotate(180deg);
+}
+
+@media (min-width: 768px) {
+    .bio-expandable {
+        display: block !important;
+    }
+    
+    .bio-toggle-btn {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .bio-toggle-btn {
+        display: block;
+    }
+    
+    .bio-expandable {
+        display: none;
+    }
+}
+

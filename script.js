@@ -295,6 +295,29 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+// Bio expand/collapse functionality for mobile
+function toggleBio(button) {
+    const bioContent = button.previousElementSibling;
+    if (bioContent && bioContent.classList.contains('bio-content')) {
+        const expandableContent = bioContent.querySelector('.bio-expandable');
+        const toggleText = button.querySelector('.bio-toggle-text');
+        if (expandableContent && toggleText) {
+            // Check if content is currently visible (default state on mobile is visible)
+            const isExpanded = expandableContent.style.display !== 'none' && 
+                              (expandableContent.style.display === '' || expandableContent.style.display === 'block');
+            if (isExpanded) {
+                expandableContent.style.display = 'none';
+                toggleText.textContent = 'more';
+                button.classList.remove('expanded');
+            } else {
+                expandableContent.style.display = 'block';
+                toggleText.textContent = 'less';
+                button.classList.add('expanded');
+            }
+        }
+    }
+}
+
 // Enhanced hover effects for elements with Tailwind-style class names
 document.addEventListener('DOMContentLoaded', function() {
     // Handle hover:border-primary/30
