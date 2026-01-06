@@ -1,6 +1,6 @@
 # Wombatlabs.ai Website
 
-A modern, responsive website for Wombatlabs - an AI-First Design Agency. This is a recreation of the website from https://wombat-ai-canvas.lovable.app/ with all user interactions and hover states included.
+A modern, responsive website for Wombatlabs - an AI-First Design Agency. 
 
 ## Features
 
