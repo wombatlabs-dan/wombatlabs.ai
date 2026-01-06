@@ -10,15 +10,22 @@ A modern, responsive website for Wombatlabs - an AI-First Design Agency.
 - **Modern UI/UX** - Dark theme with teal/cyan accent colors
 - **Smooth Scrolling** - Navigation links smoothly scroll to sections
 - **Performance Optimized** - Lightweight and fast loading
+- **Mobile-Optimized Team Bios** - Expandable team member profiles with intuitive toggle controls
+- **Contact Form Integration** - Formspree integration for contact form submissions
 
 ## File Structure
 
 ```
-lovable-WBL/
-├── index.html      # Main HTML structure
-├── styles.css      # All styling, animations, and hover states
-├── script.js       # JavaScript for interactions
-└── README.md       # This file
+wombatlabs.ai/
+├── index.html          # Main HTML structure
+├── styles.css          # All styling, animations, and hover states
+├── script.js           # JavaScript for interactions
+├── wombat-logo.png     # Company logo
+├── dan-harrison.jpg    # Team member photo
+├── kevin-ho.jpg        # Team member photo
+├── wrangler.jsonc      # Cloudflare Workers configuration
+├── 404.html            # 404 error page
+└── README.md           # This file
 ```
 
 ## Hover States Included
@@ -35,7 +42,26 @@ lovable-WBL/
 
 ## Getting Started
 
-Simply open `index.html` in a web browser. No build process or dependencies required.
+### Local Development
+
+1. Start a local server on port 8111:
+   ```bash
+   python3 -m http.server 8111
+   ```
+
+2. Open your browser and navigate to:
+   ```
+   http://localhost:8111
+   ```
+
+Alternatively, simply open `index.html` in a web browser. No build process or dependencies required.
+
+### Cloudflare Workers Deployment
+
+The site is configured for Cloudflare Workers using `wrangler.jsonc`. Deploy using:
+```bash
+wrangler pages deploy .
+```
 
 ## Browser Support
 
@@ -62,8 +88,17 @@ Simply open `index.html` in a web browser. No build process or dependencies requ
 2. **About** - Company overview and key differentiators
 3. **Approach** - 4-step process explanation
 4. **Services** - 6 service offerings in a grid
-5. **Contact** - Call-to-action section
-6. **Footer** - Links and social media
+5. **Team** - Team member profiles with expandable bios on mobile
+6. **Contact** - Contact form section
+7. **Footer** - Links and social media
+
+## Team Section Features
+
+- **Team Member Profiles** - Detailed bios for Dan Harrison (Founding Director) and Kevin Ho (Co-Founder & Lead Product Designer)
+- **Mobile-Responsive Bios** - On mobile devices, bios show only the first paragraph by default with a "more" toggle button
+- **Expandable Content** - Click "more" to expand and see full bio, click "less" to collapse
+- **Interactive Arrows** - Green arrow icons indicate expand/collapse state (down arrow for "more", up arrow for "less")
+- **Highlighted Keywords** - Important phrases in team bios are highlighted in bold
 
 ## Customization
 
