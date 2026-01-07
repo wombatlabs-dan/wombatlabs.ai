@@ -1368,23 +1368,13 @@ footer a.hover\:bg-secondary\/80:hover {
     transform: rotate(180deg);
 }
 
-@media (min-width: 768px) {
-    .bio-expandable {
-        display: block !important;
-    }
-    
-    .bio-toggle-btn {
-        display: none !important;
-    }
+/* Bio expandable content is hidden by default at all breakpoints */
+.bio-expandable {
+    display: none;
 }
 
-@media (max-width: 767px) {
-    .bio-toggle-btn {
-        display: block;
-    }
-    
-    .bio-expandable {
-        display: none;
-    }
+/* Toggle button is visible at all breakpoints */
+.bio-toggle-btn {
+    display: inline-flex;
 }
 
